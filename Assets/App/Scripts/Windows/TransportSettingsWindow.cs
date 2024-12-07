@@ -34,6 +34,6 @@ public class TransportSettingsWindow : BaseWindow
     if (value)
       GameData.GameProcess.SpawnTransport(transportType);
     else
-      GameData.GameProcess.SpawnTransport(transportType);
+      GameData.GameProcess.DespawnTransport(transportType);
   }
 }

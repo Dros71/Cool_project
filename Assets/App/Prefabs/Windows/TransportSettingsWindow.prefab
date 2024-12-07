@@ -4720,7 +4720,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5563107426354061842}
+    - {fileID: 6718072771447711365}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4728,11 +4730,11 @@ MonoBehaviour:
     SerializationNodes:
     - Name: SpawnButtons
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Transport, Assembly-CSharp],[UnityEngine.UI.Toggle,
+      Data: 0|System.Collections.Generic.Dictionary`2[[TransportType, Assembly-CSharp],[UnityEngine.UI.Toggle,
         UnityEngine.UI]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Transport, Assembly-CSharp]],
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[TransportType, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -4745,7 +4747,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
@@ -4753,8 +4755,20 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: $v
-      Entry: 6
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -4764,6 +4778,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  GameData: {fileID: 0}
   CloseButton: {fileID: 5992897635659214009}
 --- !u!114 &6412454230667248936
 MonoBehaviour:

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameData : SerializedMonoBehaviour
 {
-  [BoxGroup("Transport")] public Dictionary<TransportType, GameObject> TransportPrefabs;
+  [BoxGroup("Transport")] public Dictionary<TransportType, TransportData> Transports;
+  [BoxGroup("Transport")] public SplineDone Spline;
   [BoxGroup("Transport")] public Transform TransformSpawnPoint;
 
   [BoxGroup("Windows")] public StartMenuWindow StartMenuWindow;
@@ -17,4 +18,6 @@ public class GameData : SerializedMonoBehaviour
   {
     GameProcess = new GameProcess(this);
   }
+  
+
 }

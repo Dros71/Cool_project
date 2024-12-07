@@ -123,6 +123,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &150417875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150417876}
+  - component: {fileID: 150417877}
+  m_Layer: 0
+  m_Name: SplineRoad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150417876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150417875}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 702664982755256842}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150417877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150417875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b28f5fcf19e7e408639f5daf8b292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dots: {fileID: 9129474473005552322, guid: 70917aa64ae1c044c8b0c6aeee79b6b4, type: 3}
+  normal: {x: 0, y: 1, z: 0}
+  closedLoop: 1
+  anchorList:
+  - position: {x: 70.33882, y: 0, z: 1.4822693}
+    handleAPosition: {x: 73.079865, y: 0, z: 23.77578}
+    handleBPosition: {x: 27.357258, y: 0, z: -3.2665596}
+  - position: {x: -243.25035, y: 0, z: -5.621578}
+    handleAPosition: {x: -220.39458, y: 0, z: 11.997658}
+    handleBPosition: {x: -247.25345, y: 0, z: -53.92463}
+  - position: {x: -239.29594, y: 0, z: -247.53264}
+    handleAPosition: {x: -242.19034, y: 0, z: -109.653625}
+    handleBPosition: {x: 6.5394707, y: 0, z: -251.0736}
+  - position: {x: 596.83203, y: 0, z: -237.39426}
+    handleAPosition: {x: 425.9105, y: 0, z: -249.642}
+    handleBPosition: {x: 600.0725, y: 0, z: 80.826096}
+  - position: {x: 602.37274, y: 0, z: 418.99213}
+    handleAPosition: {x: 608.00995, y: 0, z: 140.00534}
+    handleBPosition: {x: 700.48706, y: 0, z: 429.83234}
+  - position: {x: 82.00841, y: 0, z: 423.81323}
+    handleAPosition: {x: 290.5748, y: 0, z: 427.48053}
+    handleBPosition: {x: 102.30699, y: 0, z: 493.55164}
 --- !u!1 &1832467402
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +475,7 @@ Transform:
   m_Children:
   - {fileID: 544180346450945283}
   - {fileID: 1888448103}
+  - {fileID: 150417876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1933658090812835856
@@ -527,17 +594,17 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6453208358042041030, guid: 5c8156349f8066142867926d7cc46ee0, type: 3}
-    - {fileID: 2812470252188555299, guid: 1a64299e3e9261b4cbea369716b2c764, type: 3}
+    - {fileID: 4106415010400768413, guid: 44c71f64644b19f4daed11814064f312, type: 3}
+    - {fileID: 7464366550087956725, guid: 1a64299e3e9261b4cbea369716b2c764, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: TransportPrefabs
+    - Name: Transports
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[TransportType, Assembly-CSharp],[UnityEngine.GameObject,
-        UnityEngine.CoreModule]], mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[TransportType, Assembly-CSharp],[TransportData,
+        Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[TransportType, Assembly-CSharp]],
@@ -561,8 +628,17 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: $v
+      Entry: 7
+      Data: 2|TransportData, Assembly-CSharp
+    - Name: Transport
       Entry: 10
       Data: 0
+    - Name: Speed
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -573,8 +649,17 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: $v
+      Entry: 7
+      Data: 3|TransportData, Assembly-CSharp
+    - Name: Transport
       Entry: 10
       Data: 1
+    - Name: Speed
+      Entry: 4
+      Data: 60
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -587,6 +672,7 @@ MonoBehaviour:
     - Name: GameProcess
       Entry: 6
       Data: 
+  Spline: {fileID: 150417877}
   TransformSpawnPoint: {fileID: 7347763591260168176}
   StartMenuWindow: {fileID: 5206146863626882853}
   GameMenuWindow: {fileID: 2063762620600279396}

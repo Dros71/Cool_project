@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameProcess
 {
-  private Dictionary<TransportType, GameObject> _transportsGameObjects = new();
+  private Dictionary<TransportType, Transport> _transportsGameObjects = new();
   
   private readonly GameData _gameData;
 
@@ -30,7 +30,7 @@ public class GameProcess
   {
     _transportsGameObjects.Add(
       transportType,
-      GameObject.Instantiate(_gameData.TransportPrefabs[transportType], _gameData.TransformSpawnPoint.position, Quaternion.identity));
+      SpawnAndSetupTransport(transportType));
   }
 
   public void DespawnTransport(TransportType transportType)
@@ -48,5 +48,13 @@ public class GameProcess
       GameObject.Destroy(transport.Value);
     
     _transportsGameObjects.Clear();
+  }
+  
+  private Transport SpawnAndSetupTransport(TransportType transportType)
+  {
+    Transport transport = GameObject.Instantiate(_gameData.Transports[transportType].Transport, _gameData.TransformSpawnPoint.position, Quaternion.identity);
+    transport.Setup(_gameData.Spline, _gameData.Transports[transportType].Speed, SplineFollower.MovementType.Units);
+    
+    return transport;
   }
 }

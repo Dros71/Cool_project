@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace App.Scripts.Transport
 {
   public class TransportContainer
   {
-    private Dictionary<TransportType, Transport> _transportsGameObjects = new();
+    public List<Transport> Transports => _transportsGameObjects.Values.ToList(); 
 
+    private Dictionary<TransportType, Transport> _transportsGameObjects = new();
+    
     private readonly GameData _gameData;
 
     public TransportContainer(GameData gameData)

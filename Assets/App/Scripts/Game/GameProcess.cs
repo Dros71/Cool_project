@@ -21,7 +21,6 @@ public class GameProcess
   public void StartGame()
   {
     
-    
     Debug.Log("Game Started!");
   }
 
@@ -32,13 +31,22 @@ public class GameProcess
     Debug.Log("Game Ended!");
   }
 
+  public void OnUpdate()
+  {
+    foreach (Transport transport in _transportContainer.Transports)
+    {
+      if (transport.FuelLeft <= 0 || transport.FuelLeft / transport.FuelUse < transport.SplineFollower.LoopPercent)
+        transport.SplineFollower.IsMovementAvailable = false;
+    }
+  }
 
   public Transport SpawnAndSetupTransport(TransportType transportType)
   {
     Transport transport = _transportContainer.SpawnTransport(transportType);
     
-    transport.Setup(transportType, _gameData.Spline, _gameData.Transports[transportType].Speed, GetRoadLineDelta(_currentRoadLine++) , SplineFollower.MovementType.Units);
+    transport.Setup(transportType, _gameData.Spline, _gameData.Transports[transportType].Speed, _gameData.Transports[transportType].FuelUse, _gameData.Transports[transportType].FuelCapacity, GetRoadLineDelta(_currentRoadLine++) , SplineFollower.MovementType.Units);
     transport.TraveledLoop += () => _achiviesService.OnTravelLooped(transport);
+    transport.TraveledLoop += transport.SpendFuelLoop;
     
     return transport;
   }

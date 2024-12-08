@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using App.Scripts.Achiviements;
 using App.Scripts.Transport;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class GameData : SerializedMonoBehaviour
 {
@@ -27,5 +29,10 @@ public class GameData : SerializedMonoBehaviour
     AchiviesService = new AchiviesService();
     
     GameProcess = new GameProcess(this, TransportContainer, AchiviesService);
+  }
+
+  private void Update()
+  {
+    GameProcess.OnUpdate();
   }
 }

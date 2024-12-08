@@ -9,6 +9,10 @@ public class SplineFollower : MonoBehaviour {
     }
     
     public event Action TraveledLoop;
+    
+    public float LoopPercent => moveAmount / maxMoveAmount;
+    public bool IsMovementAvailable = true;
+    
 
     private SplineDone _spline;
     private float _speed = 1f;
@@ -31,7 +35,10 @@ public class SplineFollower : MonoBehaviour {
 
     private void Update() 
     {
-        float amount = moveAmount + (Time.deltaTime * _speed);
+        if(IsMovementAvailable == false) return;
+
+        float delta = Time.deltaTime * _speed;
+        var amount = moveAmount + delta;
         
         if(amount >= maxMoveAmount) 
             TraveledLoop?.Invoke();

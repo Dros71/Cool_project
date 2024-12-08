@@ -376,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: RoadLineWidth
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: GameMenuWindow

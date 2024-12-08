@@ -10,8 +10,8 @@ namespace App.Scripts.Transport
     
     private TransportType _transportType;
 
-    public float FuelUse { get; private set; }
-    public float FuelLeft { get; private set; }
+    [field: SerializeField] public float FuelUse { get; private set; }
+    [field: SerializeField] public float FuelLeft { get; private set; }
     
     public event Action TraveledLoop;
 

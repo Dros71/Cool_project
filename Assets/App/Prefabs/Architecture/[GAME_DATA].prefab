@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1681502946656046348
+--- !u!1 &7122760097065168339
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7646664055881489389}
-  - component: {fileID: 6326974546605180556}
+  - component: {fileID: 3907715802484445921}
+  - component: {fileID: 3004595363914914944}
   m_Layer: 0
   m_Name: '[GAME_DATA]'
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7646664055881489389
+--- !u!4 &3907715802484445921
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681502946656046348}
+  m_GameObject: {fileID: 7122760097065168339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.94887, y: 27.958633, z: 62.5616}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6326974546605180556
+--- !u!114 &3004595363914914944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681502946656046348}
+  m_GameObject: {fileID: 7122760097065168339}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00d0756767e908d498c4a38cf8adcdd5, type: 3}
@@ -89,7 +89,7 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 4
-      Data: 50
+      Data: 20
     - Name: 
       Entry: 8
       Data: 
@@ -110,7 +110,7 @@ MonoBehaviour:
       Data: 1
     - Name: Speed
       Entry: 4
-      Data: 60
+      Data: 15
     - Name: 
       Entry: 8
       Data: 
@@ -128,8 +128,8 @@ MonoBehaviour:
       Data: 
   Spline: {fileID: 0}
   TransformSpawnPoint: {fileID: 0}
-  RoadLines: 4
-  RoadLineWidth: 1
+  RoadLines: 0
+  RoadLineWidth: 0
   StartMenuWindow: {fileID: 0}
   GameMenuWindow: {fileID: 0}
   TransportSettingsWindow: {fileID: 0}

@@ -30,8 +30,11 @@ public class SplineMesh : MonoBehaviour {
         UpdateMesh();
     }
 
-    private void UpdateMesh() {
-        if (mesh != null) {
+    private void UpdateMesh() 
+    {
+        if (mesh != null) 
+        {
+            
             mesh.Clear();
             Destroy(mesh);
             mesh = null;

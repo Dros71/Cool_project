@@ -247,16 +247,8 @@ public class SplineDone : MonoBehaviour {
     }
 
     public void AddAnchor() {
-        anchorList ??= new List<Anchor>();
+        if (anchorList == null) anchorList = new List<Anchor>();
 
-        if (anchorList.Count == 0)
-            anchorList.Add(new Anchor
-            {
-                position = new Vector3(0, 0, 0),
-                handleAPosition = new Vector3(0, 0, 0),
-                handleBPosition = new Vector3(0, 0, 0),
-            });
-        
         Anchor lastAnchor = anchorList[anchorList.Count - 1];
         anchorList.Add(new Anchor {
             position = lastAnchor.position + new Vector3(1, 1, 0),

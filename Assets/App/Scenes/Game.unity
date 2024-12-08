@@ -455,12 +455,12 @@ PrefabInstance:
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[10]
       value: '"path":"Transports.{3es}","value":{"$id":0,"$type":"TransportData,
-        Assembly-CSharp","Transport":$eref:1,"Speed":10,"FuelUse":20,"FuelCapacity":120}'
+        Assembly-CSharp","Transport":$eref:1,"Speed":10,"FuelUse":20,"FuelCapacity":40}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[11]
       value: '"path":"Transports.{3es}.FuelCapacity","value":{"$id":0,"$type":"System.Single,
-        mscorlib",120}'
+        mscorlib",40}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[12]

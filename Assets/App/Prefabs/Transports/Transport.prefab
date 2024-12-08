@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SplineFollower: {fileID: 3706615984348139844}
+  View: {fileID: 4191447504013435800}
 --- !u!114 &3706615984348139844
 MonoBehaviour:
   m_ObjectHideFlags: 0

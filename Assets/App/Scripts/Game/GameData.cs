@@ -5,8 +5,11 @@ using UnityEngine;
 public class GameData : SerializedMonoBehaviour
 {
   [BoxGroup("Transport")] public Dictionary<TransportType, TransportData> Transports;
-  [BoxGroup("Transport")] public SplineDone Spline;
-  [BoxGroup("Transport")] public Transform TransformSpawnPoint;
+
+  [BoxGroup("Road")] public SplineDone Spline;
+  [BoxGroup("Road")] public Transform TransformSpawnPoint;
+  [BoxGroup("Road")] public float RoadLines;
+  [BoxGroup("Road")] public float RoadLineWidth;
 
   [BoxGroup("Windows")] public StartMenuWindow StartMenuWindow;
   [BoxGroup("Windows")] public GameMenuWindow GameMenuWindow;

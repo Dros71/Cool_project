@@ -44,8 +44,8 @@ public class SplineFollower : MonoBehaviour {
 
     public void Setup(SplineDone spline, float speed, MovementType movementType)
     {
-        _spline = spline;
         _speed = speed;
+        _spline = spline;
         _movementType = movementType;
     }
 }

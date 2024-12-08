@@ -26,7 +26,7 @@ public class GameProcess
     Debug.Log("Game Ended!");
   }
   
-  public void SpawnTransport(TransportType transportType)
+  public void SpawnTransport(TransportType transportType, int line = 0)
   {
     _transportsGameObjects.Add(
       transportType,
@@ -53,7 +53,7 @@ public class GameProcess
   private Transport SpawnAndSetupTransport(TransportType transportType)
   {
     Transport transport = GameObject.Instantiate(_gameData.Transports[transportType].Transport, _gameData.TransformSpawnPoint.position, Quaternion.identity);
-    transport.Setup(_gameData.Spline, _gameData.Transports[transportType].Speed, SplineFollower.MovementType.Units);
+    transport.Setup(_gameData.Spline, _gameData.Transports[transportType].Speed, Random.Range(1, _gameData.RoadLines+1), SplineFollower.MovementType.Units);
     
     return transport;
   }

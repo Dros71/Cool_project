@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5980702790730928252, guid: 5c8156349f8066142867926d7cc46ee0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980702790730928252, guid: 5c8156349f8066142867926d7cc46ee0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6453208358042041030, guid: 5c8156349f8066142867926d7cc46ee0, type: 3}
       propertyPath: m_Name
       value: Bus

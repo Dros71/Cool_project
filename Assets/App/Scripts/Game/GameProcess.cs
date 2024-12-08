@@ -37,7 +37,7 @@ public class GameProcess
   {
     Transport transport = _transportContainer.SpawnTransport(transportType);
     
-    transport.Setup(_gameData.Spline, _gameData.Transports[transportType].Speed, GetRoadLineDelta(_currentRoadLine++) , SplineFollower.MovementType.Units);
+    transport.Setup(transportType, _gameData.Spline, _gameData.Transports[transportType].Speed, GetRoadLineDelta(_currentRoadLine++) , SplineFollower.MovementType.Units);
     transport.TraveledLoop += () => _achiviesService.OnTravelLooped(transport);
     
     return transport;

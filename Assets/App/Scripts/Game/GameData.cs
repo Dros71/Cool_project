@@ -21,14 +21,14 @@ public class GameData : SerializedMonoBehaviour
   
   [HideInInspector] public GameProcess GameProcess;
   [HideInInspector] public TransportContainer TransportContainer;
-  [HideInInspector] public AchiviesService AchiviesService;
+  [HideInInspector] public LogService LogService;
 
   private void Awake()
   {
     TransportContainer = new TransportContainer(this);
-    AchiviesService = new AchiviesService();
+    LogService = new LogService();
     
-    GameProcess = new GameProcess(this, TransportContainer, AchiviesService);
+    GameProcess = new GameProcess(this, TransportContainer, LogService);
   }
 
   private void Update()

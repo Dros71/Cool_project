@@ -32,7 +32,7 @@ public class TransportSettingsWindow : BaseWindow
   private void OnSpawnButtonValueChanged(TransportType transportType, bool value)
   {
     if (value)
-      GameData.GameProcess.SpawnTransport(transportType);
+      GameData.GameProcess.SpawnAndSetupTransport(transportType);
     else
       GameData.GameProcess.DespawnTransport(transportType);
   }

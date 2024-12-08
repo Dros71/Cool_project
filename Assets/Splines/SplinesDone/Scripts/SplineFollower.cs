@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class SplineFollower : MonoBehaviour {
 
@@ -6,6 +7,8 @@ public class SplineFollower : MonoBehaviour {
         Normalized,
         Units
     }
+    
+    public event Action TraveledLoop;
 
     private SplineDone _spline;
     private float _speed = 1f;
@@ -26,8 +29,14 @@ public class SplineFollower : MonoBehaviour {
         }
     }
 
-    private void Update() {
-        moveAmount = (moveAmount + (Time.deltaTime * _speed)) % maxMoveAmount;
+    private void Update() 
+    {
+        float amount = moveAmount + (Time.deltaTime * _speed);
+        
+        if(amount >= maxMoveAmount) 
+            TraveledLoop?.Invoke();
+        
+        moveAmount = amount % maxMoveAmount;
 
         switch (_movementType) {
             default:

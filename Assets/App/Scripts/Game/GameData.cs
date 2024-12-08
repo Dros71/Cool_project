@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using App.Scripts.Achiviements;
+using App.Scripts.Transport;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,11 +18,14 @@ public class GameData : SerializedMonoBehaviour
   [BoxGroup("Windows")] public TransportSettingsWindow TransportSettingsWindow;
   
   [HideInInspector] public GameProcess GameProcess;
+  [HideInInspector] public TransportContainer TransportContainer;
+  [HideInInspector] public AchiviesService AchiviesService;
 
   private void Awake()
   {
-    GameProcess = new GameProcess(this);
+    TransportContainer = new TransportContainer(this);
+    AchiviesService = new AchiviesService();
+    
+    GameProcess = new GameProcess(this, TransportContainer, AchiviesService);
   }
-  
-
 }

@@ -282,6 +282,34 @@ PrefabInstance:
       propertyPath: meshWidth
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[0].position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[2].position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[3].position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[2].handleAPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[2].handleBPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[3].handleAPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264954183981958336, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
+      propertyPath: anchorList.Array.data[3].handleBPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4221059316851043607, guid: 225ad17b6f39afb41a9b6bd55b4b0f19, type: 3}
       propertyPath: m_Name
       value: '[SCENE]'
@@ -431,7 +459,7 @@ PrefabInstance:
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[5]
       value: '"path":"Transports.{2es}","value":{"$id":0,"$type":"TransportData,
-        Assembly-CSharp","Transport":$eref:0,"Speed":10,"FuelUse":8,"FuelCapacity":20}'
+        Assembly-CSharp","Transport":$eref:0,"Speed":15,"FuelUse":8,"FuelCapacity":20}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[6]
@@ -446,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[8]
       value: '"path":"Transports.{2es}.Speed","value":{"$id":0,"$type":"System.Single,
-        mscorlib",10}'
+        mscorlib",15}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[9]
@@ -479,12 +507,12 @@ PrefabInstance:
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[15]
       value: '"path":"Transports.{4es}","value":{"$id":0,"$type":"TransportData,
-        Assembly-CSharp","Transport":$eref:2,"Speed":7,"FuelUse":30,"FuelCapacity":100}'
+        Assembly-CSharp","Transport":$eref:2,"Speed":12,"FuelUse":30,"FuelCapacity":65}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[16]
       value: '"path":"Transports.{4es}.FuelCapacity","value":{"$id":0,"$type":"System.Single,
-        mscorlib",100}'
+        mscorlib",65}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[17]
@@ -494,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[18]
       value: '"path":"Transports.{4es}.Speed","value":{"$id":0,"$type":"System.Single,
-        mscorlib",7}'
+        mscorlib",12}'
       objectReference: {fileID: 0}
     - target: {fileID: 3004595363914914944, guid: 3afa4985ee839a94ea209c4f572721e5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[19]

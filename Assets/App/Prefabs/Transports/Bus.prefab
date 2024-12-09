@@ -153,10 +153,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 994980f8b58fb564fa636f3d9206c4cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe5c1194a2b3be54ea2f66d65d72bca8, type: 2}
     - target: {fileID: 919132149155446097, guid: 994980f8b58fb564fa636f3d9206c4cd, type: 3}
       propertyPath: m_Name
       value: bus
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 994980f8b58fb564fa636f3d9206c4cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7023ffef4520054798cb2b551310039, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

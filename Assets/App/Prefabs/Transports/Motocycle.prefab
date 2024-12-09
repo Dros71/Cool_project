@@ -129,10 +129,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7726796838964374709, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b68507dab70cd594386577d1bd5745f5, type: 2}
+    - target: {fileID: -4906746792814601755, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a002d3551fffbe4ca9ab30ecd8433d9, type: 2}
+    - target: {fileID: -3474809641921555030, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e59d95b41aced1b45bcaff26f5806e27, type: 2}
+    - target: {fileID: -277292217204293580, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d15694697985b7e419b4fbd4609634ad, type: 2}
     - target: {fileID: 919132149155446097, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
       propertyPath: m_Name
       value: Motocycle
       objectReference: {fileID: 0}
+    - target: {fileID: 2568975369265892145, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ce978b3a87469b246add17c30b3c0192, type: 2}
+    - target: {fileID: 3007925361063523235, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee5cf2134303ea24eada68ad34955c91, type: 2}
+    - target: {fileID: 5694826244586263782, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d15694697985b7e419b4fbd4609634ad, type: 2}
+    - target: {fileID: 5839963693344749908, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b68507dab70cd594386577d1bd5745f5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -5711052370896006010, guid: 53b23019d39b2844493fa74a49e660d3, type: 3}

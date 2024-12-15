@@ -46,7 +46,7 @@ namespace App.Scripts.Transport
     public void DespawnAllTransports()
     {
       foreach (var transport in _transportsGameObjects) 
-        GameObject.Destroy(transport.Value);
+        GameObject.Destroy(transport.Value.gameObject);
     
       _transportsGameObjects.Clear();
     }

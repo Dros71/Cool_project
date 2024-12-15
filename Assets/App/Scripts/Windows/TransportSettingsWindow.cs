@@ -23,11 +23,18 @@ public class TransportSettingsWindow : BaseWindow
   {
     gameObject.SetActive(true);
   }
+
+  public void ResetSpawnButtons()
+  {
+    foreach (var button in SpawnButtons)
+      button.Value.isOn = false;
+  }
   
   private void OnCloseButtonClick()
   {
     gameObject.SetActive(false);
   }
+
 
   private void OnSpawnButtonValueChanged(TransportType transportType, bool value)
   {
@@ -36,4 +43,5 @@ public class TransportSettingsWindow : BaseWindow
     else
       GameData.GameProcess.DespawnTransport(transportType);
   }
+
 }

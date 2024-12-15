@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using App.Scripts.Achiviements;
 using App.Scripts.Transport;
 using UnityEngine;
@@ -9,7 +8,7 @@ public class GameProcess
   private readonly TransportContainer _transportContainer;
   private readonly LogService _logService;
   
-  private int _currentRoadLine = 1;
+  private int _currentRoadLine;
 
   public GameProcess(GameData gameData, TransportContainer transportContainer, LogService logService)
   {
@@ -20,6 +19,7 @@ public class GameProcess
 
   public void StartGame()
   {
+    ResetRoad();
     
     Debug.Log("Game Started!");
   }
@@ -27,6 +27,7 @@ public class GameProcess
   public void EndGame()
   {
     _transportContainer.DespawnAllTransports();
+    _gameData.TransportSettingsWindow.ResetSpawnButtons();
     
     Debug.Log("Game Ended!");
   }
@@ -49,7 +50,7 @@ public class GameProcess
   {
     Transport transport = _transportContainer.SpawnTransport(transportType);
     
-    transport.Setup(transportType, _gameData.Spline, _gameData.Transports[transportType].Speed, _gameData.Transports[transportType].FuelUse, _gameData.Transports[transportType].FuelCapacity, GetRoadLineDelta(_currentRoadLine++) , SplineFollower.MovementType.Units);
+    transport.Setup(transportType, _gameData.Spline, _gameData.Transports[transportType].Speed, _gameData.Transports[transportType].FuelUse, _gameData.Transports[transportType].FuelCapacity, GetRoadLineDelta(transportType,_currentRoadLine++) , SplineFollower.MovementType.Units);
     transport.TraveledLoop += () => _logService.OnTravelLooped(transport);
     transport.TraveledLoop += transport.SpendFuelLoop;
     
@@ -61,8 +62,16 @@ public class GameProcess
     _transportContainer.DespawnTransport(transportType);
   }
 
-  private float GetRoadLineDelta(int line)
+  private float GetRoadLineDelta(TransportType transportType, int line)
   {
+    if (transportType == TransportType.TramBus)
+      line = 1;
+    
     return (((line - 1) - _gameData.RoadLines / 2f) + 0.5f) * _gameData.RoadLineWidth;
+  }
+
+  private void ResetRoad()
+  {
+    _currentRoadLine = 2;
   }
 }

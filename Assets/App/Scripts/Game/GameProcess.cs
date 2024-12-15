@@ -65,7 +65,10 @@ public class GameProcess
   private float GetRoadLineDelta(TransportType transportType, int line)
   {
     if (transportType == TransportType.TramBus)
+    {
       line = 0;
+      _currentRoadLine--;
+    }
     
     return (((line - 1) - _gameData.RoadLines / 2f) + 0.5f) * _gameData.RoadLineWidth;
   }

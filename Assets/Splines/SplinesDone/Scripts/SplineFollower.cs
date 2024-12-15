@@ -2,6 +2,8 @@
 using UnityEngine;
 
 public class SplineFollower : MonoBehaviour {
+    
+    private const float Epsilon = 0.01f;
 
     public enum MovementType {
         Normalized,
@@ -45,17 +47,7 @@ public class SplineFollower : MonoBehaviour {
         
         moveAmount = amount % maxMoveAmount;
 
-        switch (_movementType) {
-            default:
-            case MovementType.Normalized:
-                transform.position = _spline.GetPositionAt(moveAmount);
-                transform.forward = _spline.GetForwardAt(moveAmount);
-                break;
-            case MovementType.Units:
-                transform.position = _spline.GetPositionAtUnits(moveAmount);
-                transform.forward = _spline.GetForwardAtUnits(moveAmount);
-                break;
-        }
+        SetPositionByMovementAmount(moveAmount);
     }
 
     public void Setup(SplineDone spline, float speed, MovementType movementType)
@@ -63,5 +55,22 @@ public class SplineFollower : MonoBehaviour {
         _speed = speed;
         _spline = spline;
         _movementType = movementType;
+        
+        SetPositionByMovementAmount(Epsilon);
+    }
+    
+    private void SetPositionByMovementAmount(float amount)
+    {
+        switch (_movementType) {
+            default:
+            case MovementType.Normalized:
+                transform.position = _spline.GetPositionAt(amount);
+                transform.forward = _spline.GetForwardAt(amount);
+                break;
+            case MovementType.Units:
+                transform.position = _spline.GetPositionAtUnits(amount);
+                transform.forward = _spline.GetForwardAtUnits(amount);
+                break;
+        }
     }
 }

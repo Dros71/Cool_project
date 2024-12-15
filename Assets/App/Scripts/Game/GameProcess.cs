@@ -65,13 +65,13 @@ public class GameProcess
   private float GetRoadLineDelta(TransportType transportType, int line)
   {
     if (transportType == TransportType.TramBus)
-      line = 1;
+      line = 0;
     
     return (((line - 1) - _gameData.RoadLines / 2f) + 0.5f) * _gameData.RoadLineWidth;
   }
 
   private void ResetRoad()
   {
-    _currentRoadLine = 2;
+    _currentRoadLine = 1;
   }
 }
